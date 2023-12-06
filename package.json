@@ -1,0 +1,49 @@
+{
+  "name": "smolbin",
+  "version": "0.1.0",
+  "description": "a small library to encode small chunks of binary data very efficiently",
+  "homepage": "https://github.com/pixelcmtd/smolbin",
+  "author": "Pixel Häußler <pixel+npm@chrissx.de> (https://github.com/pixelcmtd)",
+  "maintainers": [
+    {
+      "name": "Pixel Häußler",
+      "email": "pixel+npm@chrissx.de",
+      "github-username": "pixelcmtd"
+    }
+  ],
+  "license": "MIT",
+  "repository": "pixelcmtd/smolbin",
+  "bugs": {
+    "url": "https://github.com/pixelcmtd/smolbin/issues"
+  },
+  "dependencies": {
+    "base64-js": "^1.5.1",
+    "random": "^4.1.0",
+    "seedrandom": "^3.0.5"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.10",
+    "benchmark": "^2.1.4",
+    "fast-check": "^3.14.0",
+    "jest": "^29.7.0",
+    "microbundle": "^0.15.1",
+    "prettier": "^3.1.0",
+    "ts-jest": "^29.1.1"
+  },
+  "type": "module",
+  "source": "src/index.ts",
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "require": "./dist/index.cjs",
+    "default": "./dist/index.modern.js"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.module.js",
+  "unpkg": "./dist/index.umd.js",
+  "scripts": {
+    "build": "microbundle",
+    "dev": "microbundle watch",
+    "format": "prettier --write src/*.ts",
+    "test": "jest"
+  }
+}
